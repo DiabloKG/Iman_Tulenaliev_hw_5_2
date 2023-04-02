@@ -3,6 +3,7 @@ package com.example.iman_tulenaliev_hw_5_2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.iman_tulenaliev_hw_5_2.databinding.ActivityResultBinding
+import com.example.iman_tulenaliev_hw_5_2.remote.LoveModel
 
 lateinit var binding2: ActivityResultBinding
 

@@ -1,4 +1,4 @@
-package com.example.iman_tulenaliev_hw_5_2
+package com.example.iman_tulenaliev_hw_5_2.remote
 
 import android.os.Parcelable
 data class LoveModel (
