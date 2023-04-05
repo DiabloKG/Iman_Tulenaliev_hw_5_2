@@ -9,6 +9,7 @@ import dagger.Module
 import dagger.Provides
 
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -26,8 +27,9 @@ class AppModule {
             ).build().create(LoveApi::class.java)
     }
 
-//    @Provides
-//    fun ProvidePrefernces(context: Context): SharedPreferences {
-//        return context.getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
-//    }
+    @Singleton
+    @Provides
+    fun provideSharedPreference(@ApplicationContext context: Context): SharedPreferences {
+        return context.getSharedPreferences("preferences_name", Context.MODE_PRIVATE)
+    }
 }
