@@ -4,23 +4,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.iman_tulenaliev_hw_5_2.databinding.ActivityResultBinding
 import com.example.iman_tulenaliev_hw_5_2.remote.LoveModel
+import dagger.hilt.android.AndroidEntryPoint
 
-lateinit var binding2: ActivityResultBinding
-
+@AndroidEntryPoint
 class ResultActivity : AppCompatActivity() {
+    lateinit var binding: ActivityResultBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding2 = ActivityResultBinding.inflate(layoutInflater)
-        setContentView(binding2.root)
+        binding = ActivityResultBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         setData()
     }
 
     private fun setData() {
         val loveModel = intent.getSerializableExtra("lovemodel") as? LoveModel
-        with(binding2){
+        with(binding){
             tvFirstName.text = loveModel?.fname.toString()
             tvSecondName.text = loveModel?.sname.toString()
-            tvResult.text = "Результат: " + loveModel?.percentage.toString()
+            tvResult.text = loveModel?.percentage.toString() + "%"
         }
     }
 }
