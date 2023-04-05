@@ -9,10 +9,12 @@ import androidx.lifecycle.Observer
 import com.example.iman_tulenaliev_hw_5_2.databinding.ActivityLoveBinding
 import com.example.iman_tulenaliev_hw_5_2.remote.LoveModel
 import com.example.iman_tulenaliev_hw_5_2.remote.LoveService
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+import javax.inject.Inject
+@AndroidEntryPoint
 class LoveActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityLoveBinding

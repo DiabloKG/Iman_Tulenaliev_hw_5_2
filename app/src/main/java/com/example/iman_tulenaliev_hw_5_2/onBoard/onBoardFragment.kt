@@ -10,7 +10,7 @@ import com.example.iman_tulenaliev_hw_5_2.R
 import com.example.iman_tulenaliev_hw_5_2.databinding.FragmentOnBoardBinding
 import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
-
+@AndroidEntryPoint
 class onBoardFragment : Fragment() {
 
     lateinit var binding: FragmentOnBoardBinding
