@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.iman_tulenaliev_hw_5_2.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 

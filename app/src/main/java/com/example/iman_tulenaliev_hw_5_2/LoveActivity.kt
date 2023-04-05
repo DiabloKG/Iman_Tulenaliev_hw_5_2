@@ -26,8 +26,10 @@ class LoveActivity : AppCompatActivity() {
     }
 
     private fun initClick() {
+        Log.e("shh", "Зашёл")
         with(binding) {
             btnCalculate.setOnClickListener {
+                Log.e("shh", "нажал")
                 LoveService().api.getPercentage(
                     etFirstName.text.toString(),
                     etSecondName.text.toString(),
@@ -38,14 +40,14 @@ class LoveActivity : AppCompatActivity() {
                                 etFirstName.text.toString(),
                                 etSecondName.text.toString()
                             ).observe(this@LoveActivity, Observer {
-                                Log.e("123456", "onResponse: $it")
+                                Log.e("shh", "onResponse: $it")
                                 getData(it)
                             })
                         }
                     }
 
                     override fun onFailure(call: Call<LoveModel>, t: Throwable) {
-                        Log.e("123456", "onResponse:  ${t.message}")
+                        Log.e("shh", "onResponse:  ${t.message}")
                     }
                 })
             }
